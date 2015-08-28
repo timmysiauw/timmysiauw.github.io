@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="Timmy Siauw"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.00" />
+
+    <title>Timmy Siauw | CV</title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="fa/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="favicon.ico"/>
+    
+    <style>
+    body {
+        font-size: 14px;
+    }
+
+    hr {
+        height: 1px;
+        margin: 30px 0px;
+    }
+
+    a {
+        color: #292929;
+    }
+
+    .cv-work-date {
+        float: right;
+    }
+
+    td {
+        padding: 5px 10px 5px 10px;
+    }
+
+    #cv-education td:first-child, #cv-employment td:first-child {
+        width: 30px;
+    }
+
+    #cv-employment span:hover {
+        color: rgb(0,232,255);
+    }
+
+    .cv-dropdown {
+        display: none;
+    }
+
+    a.pdf:hover {
+        color: rgb(191,0,0);
+    }
+    </style>
+
+</head>
+
+<body>
+
+	<header>
+        <div class = "container">
+            
+            <nav id="nav">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cv.html" class = "active">CV</a></li>
+                    <li><a href="interests.html">Interests</a></li>
+                </ul>
+            </nav>
+            <br style="clear:both;">
+        </div>
+    </header>
+
+	<div class = "container content">
+        <h1 style = "text-align:center"> Cirriculum Vitae </h1>
+        <a class = "pdf" style = "float:right"><span class = "fa fa-file-pdf-o fa-lg"></span></a>
+
+        <h3> Education </h3>
+
+        <table id = "cv-education" style = "width:100%">
+            <tr>
+                <td>Ph.D.</td>
+                <td>UC Berkeley, Civil and Environmental Engineering</td>
+                <td class = "cv-work-date">2012</td>
+            </tr>
+
+            <tr>
+                <td>M.S.</td>
+                <td>UC Berkeley, Civil and Environmental Engineering</td>
+                <td class = "cv-work-date">2008</td>
+            </tr>
+
+            <tr>
+                <td>B.S.</td>
+                <td>UC Berkeley, Civil and Environmental Engineering</td>
+                <td class = "cv-work-date">2006</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h3> Employment </h3>
+
+        <table id = "cv-employment" style = "width:100%">
+            
+            <tr>
+                <td><span class = "fa fa-info-circle"></span></td>
+                <td>STEM Academic Advisor @ <a href = "http://surf.berkeley.edu/">SURF</a>, UC Berkeley</td>
+                <td class = "cv-work-date">1/15 - 8/15</td>
+            </tr>
+            <tr class = "cv-dropdown">
+                <td colspan = "3" style = "padding: 5px, 30px, 5px, 30px">I advised 60+ students for the <a>Summer Undergraduate Research Fellowship (SURF)</a>. This included mentoring them through writing a research proposal, their various research projects, and giving a talk or presenting a poster. I also re-designed the application on <a href = "http://www.wizehive.com/">WizeHive</a> to be more efficient and setup the capstone research conference for the program.</td>
+            </tr>
+            <tr>
+                <td><span class = "fa fa-info-circle"></span></td>
+                <td>CEO @ Nimble Radiotherapy</td>
+                <td class = "cv-work-date">6/14 - 7/15</td>
+            </tr>
+            <tr class = "cv-dropdown">
+                <td colspan = "3" style = "padding: 5px, 30px, 5px, 30px">I founded a startup company, Nimble, to develop a web-based software planning tool for radiation oncologists. I did product development, full stack web development, user interface design, and market validation. </td>
+            </tr>
+            <tr>
+                <td><span class = "fa fa-info-circle"></span></td>
+                <td>Post-doctoral Researcher @ Dept. Radiation Oncology, UCSF</td>
+                <td class = "cv-work-date">1/13 - 6/14</td>
+            </tr>
+            <tr class = "cv-dropdown">
+                <td colspan = "3" style = "padding: 5px, 30px, 5px, 30px">
+                I helped develop a Philips prototype system for prostate, permanent-seed implant brachytherapy. The system incorporated real-time ultrasound, deformable image registration algorithms and an electromagnetic needle tracking system. I performed benchmark testing for the system in gelatin phantoms and gave feedback on the user interface design. 
+
+                I also developed and tested an end-to-end workflow for building custom brachytherapy applicators. This worked required combining patient scans and user input into a 3D model of an applicator, sourcing the 3D printing, validating the printed applicator, cleaning it, and streamlining the workflow to be clinically viable.
+
+                I recruited and mentored several undergraduate student researchers from UC Berkeley, including two that published journal articles (see Nattagh et al, 2013 and Cunha et al, 2015).</td>
+            </tr>
+            <tr>
+                <td><span class = "fa fa-info-circle"></span></td>
+                <td>Graduate Student Researcher @ UC Berkeley</td>
+                <td class = "cv-work-date">8/12 - 12/12</td>
+            </tr>
+            <tr class = "cv-dropdown">
+                <td colspan = "3" style = "padding: 5px, 30px, 5px, 30px">I developed algorithms based on linear and integer programs that computed needle configurations and dose distributions for high dose rate brachytherapy. I designed the linear and integer programming models, analyzed their properties when appropriate, and tested them on data taken from patients previously treated at UCSF. To support this work, I also developed a Matlab toolbox for loading patient data sets, inputing parameters, and testing new planning algorithms on batches of data. In one study, I integrated these planning algorithms on the Acubot-RND, a needle insertion robot develped at Johns Hopkins University, to determine the feasibility of automating the needle insertion process of brachytherapy. This study won the Best Application Paper Award at the Conference for Automation Science and Engineering in 2012. </td>
+            </tr>
+            <tr>
+                <td><span class = "fa fa-info-circle"></span></td>
+                <td>Graduate Student Instructor @ UC Berkeley</td>
+                <td class = "cv-work-date">8/06 - 5/11</td>
+            </tr>
+            <tr class = "cv-dropdown">
+                <td colspan = "3" style = "padding: 5px, 30px, 5px, 30px">During various semesters, I was the head TA, discussion leader, lab instructor, and assignment writer for E7, an introductory programming course for engineers. Each semester, E7 has approximately 400 students, making it the largest course in the College of Engineering at UC Berkeley. In addition to my regular responsibilities as a TA, I contributed an <a>automatic grading system</a>, which reduced 40 grading hours per week to as little as 1 hour per week, and a <a>semester project</a>, which won me the Teaching Effectiveness Award in 2008. The <a>Teaching Effectiveness Award</a> is given to approximately 10 of the 1000 TA's each semester, and I was the first TA in the Civil Engineering department to ever win this award. My teaching experience culminated in a <a> Matlab textbook </a>, which is used at UC Berkeley, San Diego State University, and Carnegie Mellon University.
+                </td>
+            </tr>
+        </table>
+        
+        <hr>
+
+        <h3> Publications </h3>
+
+         <table id = "cv-publications" style = "width:100%">
+            <tr>
+                <td><a class = "pdf"><span class = "fa fa-file-pdf-o fa-lg"></span></a></td>
+                <td>Cunha, J. Adam M., Katherine Mellis, Rajni Sethi, Timmy Siauw, Atchar Sudhyadhom, Animesh Garg, Ken Goldberg, I-Chow Hsu, and Jean Pouliot. "Evaluation of PC-ISO for Customized, 3D Printed, Gynecologic 192-Ir HDR Brachytherapy Applicators." Journal of Applied Clinical Medical Physics 16, no. 1 (2015).</td>
+            </tr>
+            <tr>
+                <td><a class = "pdf"><span class = "fa fa-file-pdf-o fa-lg"></span></a></td>
+                <td>Nattagh, Khashayar, Timmy Siauw, Jean Pouliot, I-Chow Hsu, and J. Adam Cunha. "A training phantom for ultrasound-guided needle insertion and suturing." Brachytherapy 13, no. 4 (2014): 413-419.</td>
+            </tr>
+            <tr>
+                <td><a class = "pdf"><span class = "fa fa-file-pdf-o fa-lg"></span></a></td>
+                <td>An Algorithm for Computing Customized 3D Printed Implants with Curvature Constrained Channels for Enhancing Intracavitary Brachytherapy Radiation Delivery. Animesh Garg, Sachin Patil, Timmy Siauw, J. Adam M. Cunha, I-Chow Hsu, Pieter Abbeel, Jean Pouliot, and Ken Goldberg. IEEE Int’l Conference on Automation Science and Engineering, Madison, WI, August 2013.</td>  
+            </tr>
+            <tr>
+                <td><a class = "pdf"><span class = "fa fa-file-pdf-o fa-lg"></span></a></td>
+                <td>Robot-Guided Open-Loop Insertion of Skew-Line Needle Arrangements for High Dose Rate Brachytherapy. Animesh Garg, Timmy Siauw, Dmitry Berenson, J.Adam M. Cunha, I-Chow Joe Hsu, Jean Pouliot, Dan Stoianovici, Ken Goldberg. IEEE Transactions on Automation Science and Engineering. V10(4), Oct 2013. pp. 948-956.</td>
+            </tr>
+            <tr>
+                <td><a class = "pdf"><span class = "fa fa-file-pdf-o fa-lg"></span></a></td>
+                <td>Integer Programs for High Dose Rate Brachytherapy Needle and Dose Planning that Directly Optimize Clinical Objectives</td>
+            </tr>
+            <tr>
+                <td><a class = "pdf"><span class = "fa fa-file-pdf-o fa-lg"></span></a></td>
+                <td>Animesh Garg, Timmy Siauw, Dmitry Berenson, Adam Cunha, I-Chow Hsu, Jean Pouliot, Dan Stoianovici, Ken Goldberg, “Initial Experiments toward Automated Robotic Implantation of Skew-Line Needle Arrangements for HDR Brachytherapy”, Conference for Automation Science and Engineering (CASE), 2012.</td>
+                
+            </tr>
+            <tr>
+                <td><a class = "pdf"><span class = "fa fa-file-pdf-o fa-lg"></span></a></td>
+                <td>Timmy Siauw, Adam Cunha, Dmitry Berenson, Alper Atamturk, I-Chow Hsu, Ken Goldberg, Jean Pouliot, “NPIP: A skew line needle configuration optimization system for HDR brachytherapy”, Medical Physics 30, no. 7 (2012): 4339. </td>
+                
+            </tr>
+            <tr>
+                <td><a class = "pdf"><span class = "fa fa-file-pdf-o fa-lg"></span></a></td>
+                <td>Timmy Siauw, Adam Cunha, Alper Atamturk, I-Chow Hsu, Jean Pouliot, Ken Goldberg, “IPIP: A new approach to inverse planning for HDR brachytherapy by directly optimizing dosimetric indices,” Medical Physics 38, no. 12 (2011), 4045–4051.</td>
+                
+            </tr>
+
+        </table>
+
+        <hr>
+
+        <h3> Book </h3>
+
+        <table id = "cv-books" style = "width:100%">
+            <tr>
+                <td><a href = "http://www.mathworks.com/support/books/book92299.html?category=18&language=1&view=category"> Siauw, Timmy, and Alexandre Bayen. An Introduction to MATLAB® Programming and Numerical Methods for Engineers. Academic Press, 2014.</a></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h3> Patent </h3>
+
+        <table id = "cv-patents" style = "width:100%">
+            <tr>
+                <td><a href = "https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2015013716">Patient-specific temporary implants for accurately guiding local means of tumor control along patient-specific internal channels to treat cancers. Provisional Patent Application 61859687. July 2013.<a></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h3> Awards </h3>
+
+        <table id = "cv-awards" style = "width:100%">
+            <tr>
+                <td>Best Application Paper Award, CASE 2012</td>
+                <td class = "cv-work-date">8/12</td>
+            </tr>
+            <tr>
+                <td>Instructional Distinction Award, UC Berkeley</td>
+                <td class = "cv-work-date">Sp.'11</td>
+            </tr>
+            <tr>
+                <td>Teaching Effectiveness Award, UC Berkeley</td>
+                <td class = "cv-work-date">Sp.'08</td>
+            </tr>
+            <tr>
+                <td>Outstanding GSI Award, UC Berkeley</td>
+                <td class = "cv-work-date">Sp.'08</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h3> Coding </h3>
+
+        Matlab, Python, CPLEX, HTML, CSS, Javascript, Node.js, Backbone.js, three.js, paper.js, D3.js, C3.js, Angular.js
+    </div>
+
+    <script>
+        var $buttons = document.getElementsByClassName("fa-info-circle");
+        for (var i=0; i<$buttons.length; i++) {
+            $buttons[i].addEventListener("click", function(event) {
+                var $row = this.parentElement.parentElement.nextElementSibling;
+                $row.style.display = ($row.style.display === "" || $row.style.display === "none") ? 
+                    "table-row" : 
+                    "none";
+            });
+        }
+    </script>
+
+    <footer>
+        <div class="container">
+            <small>© 2015, Timmy Siauw</small>
+            <a href = ""><span class = "fa fa-envelope-square fa-2x"></span></a>
+            <a href = "https://github.com/timmysiauw"><span class = "fa fa-github-square fa-2x"></span></a>
+            <a href = "https://www.linkedin.com/in/timmysiauw"><span class = "fa fa-linkedin-square fa-2x"></span></a>
+            <a href = "https://twitter.com/TimmySiauw"><span class = "fa fa-twitter-square fa-2x"></span></a>
+        </div>
+    </footer>
+</body>
+</html>
