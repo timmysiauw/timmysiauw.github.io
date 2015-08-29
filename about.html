@@ -15,6 +15,15 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     
     <style>
+        #portraits {
+            margin-bottom: 30px;
+        }
+
+        .portrait {
+            width: 19%;
+            margin: 0.5%;
+            float: left;
+        }
     </style>
 
 </head>
@@ -25,7 +34,7 @@
         <div class = "container">
             
             <a href = "index.html"><img src = "logo.png"/></a>
-            
+
             <nav id="nav">
                 <ul>
                     <li><a href="about.html" class = "active">About</a></li>
@@ -40,17 +49,26 @@
     </header>
 
 	<div class = "container content">
-        <p>Hi! I'm Timmy Siauw (rhymes with "<i>meow</i>"). I've been in Berkeley, CA since 2002, and I received my Ph.D. from UC Berkeley in 2012. My graduate research focused on a cancer therapy called "<i><a href = "https://en.wikipedia.org/wiki/Brachytherapy">brachytherapy</a></i>", which delivers radioactive pellets directly to a tumor site. I developed algorithms that figure out where these pellets should go so the patient gets treated without hurting them.</p>
+        
+        <div id = "portraits">
+            <img class = "portrait shadow-2" src = "images/timmysiauw-fedora-square.jpg"/>
+            <img class = "portrait shadow-2" src = "images/timmysiauw-donut-burger-square.png"/>
+            <img class = "portrait shadow-2" src = "images/timmysiauw-skydiving-square.jpg"/>
+            <img class = "portrait shadow-2" src = "images/timmysiauw-monkeys-square.png"/>
+            <img class = "portrait shadow-2" src = "images/timmysiauw-surf-square.png"/>
 
-        <p>My engineering philosophy is to find real-world problems, represent them using mathematical models that have interesting algorithmic properties (such as <a>linear programs</a>), and use those models to inform decision making and improve system performance. Currently, I am appyling this philosphy in the context of data science and visualization through web applications. </p>
+            <br style="clear:both;">
+        </div>
 
-        <!--<p>Personally, I believe in adding value to the world and exploring possibilities enabled by new information. In the series finale of Star Trek: The Next Generation, the omnipotent Q puts it beautifully,</p>
+        <div id = "about">
+            <p>Hi! I'm Timmy Siauw (rhymes with "<i>meow</i>"). I've been in Berkeley, CA since 2002, and I received my Ph.D. from UC Berkeley in 2012. My graduate research focused on a cancer therapy called "<i><a href = "https://en.wikipedia.org/wiki/Brachytherapy">brachytherapy</a></i>", which delivers radioactive pellets directly to a tumor site. I developed algorithms that figure out where these pellets should go so the patient gets treated without hurting them.</p>
 
-        <p style = "padding: 0% 15% 0% 15%; text-align: justify; color: #FBD03F">"We wanted to see if you had the ability to expand your mind and your horizons. ... For that one fraction of a second, you were open to options you had never considered. That is the exploration that awaits you. Not mapping stars and studying nebulae, but charting the unknown possibilities of existence."</p> -->
+            <p>My engineering philosophy is to find real-world problems, represent them using mathematical models that have interesting algorithmic properties (such as <a href = "https://en.wikipedia.org/wiki/Linear_programming">linear programs</a>), and use those models to inform decision making and improve system performance. I am currently appyling this philosophy to data science and visualization through web applications. </p>
 
-        <p>When I'm not engineering, I enjoy bouldering, pursuing overall health and fitness, playing Go, reading science fiction and fantasy books, and going to the movie theater.</p>
+            <p>When I'm not engineering, I enjoy bouldering, pursuing overall health and fitness, playing Go, reading science fiction and fantasy books, and going to the movie theater.</p>
 
-        <p>Please enjoy the rest my site!</p>
+            <p>Please enjoy the rest my site!</p>
+        </div>
     </div>
 
     <footer>
