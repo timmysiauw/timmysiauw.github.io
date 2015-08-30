@@ -125,4 +125,12 @@ footer a:hover {
     body {
     	font-size: 12px;
     }
+
+    header {
+    	padding-left:0px;
+	}
+
+	header img {
+    	margin-left: 0px;
+	}
 }
