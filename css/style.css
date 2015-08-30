@@ -43,9 +43,7 @@ header {
     right:0;
     z-index:10;
     background-color: #DDDDDD;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #292929;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 header img {
@@ -89,9 +87,7 @@ footer {
     z-index:10;
     margin-top:-47px;
     background-color: #DDDDDD;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: #292929;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 footer small {
 	margin-right: 15px;
@@ -123,4 +119,10 @@ footer a:hover {
 }
 .shadow-5 {
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+    	font-size: 12px;
+    }
 }
