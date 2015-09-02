@@ -471,6 +471,23 @@ var interests = [
 		keywords: [],
 		blurb: null
 	},
+	{
+		name: "Robot Tournament",
+		subtitle: null,
+		link: "http://www.mathworks.com/company/newsletters/articles/motivating-first-year-uc-berkeley-students-to-learn-programming-with-a-virtual-robot-tournament.html",
+		category: ["Me"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "Teaching Effectiveness Award",
+		subtitle: null,
+		link: "http://www.ce.berkeley.edu/apps/news-archive/view.php?item=256",
+		category: ["Me"],
+		keywords: [],
+		blurb: null
+	},
+	
 	/*{
 		name: "The Silmarillion",
 		subtitle: null,
