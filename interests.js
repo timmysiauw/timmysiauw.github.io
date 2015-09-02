@@ -147,7 +147,7 @@ var interests = [
 		name: "The Four Hour Work Week",
 		subtitle: null,
 		link: "http://www.amazon.com/The-4-Hour-Workweek-Anywhere-Expanded/dp/0307465357",
-		category: ["Book"],
+		category: ["Books"],
 		keywords: [],
 		blurb: null
 	},
@@ -155,7 +155,7 @@ var interests = [
 		name: "The Four Hour Body",
 		subtitle: null,
 		link: "http://www.amazon.com/Hour-Body-Uncommon-Incredible-Superhuman/dp/030746363X/ref=sr_1_1?s=books&ie=UTF8&qid=1441043867&sr=1-1&keywords=the+four+hour+body",
-		category: ["Book"],
+		category: ["Books"],
 		keywords: [],
 		blurb: null
 	},
@@ -163,7 +163,7 @@ var interests = [
 		name: "The Calorie Myth",
 		subtitle: null,
 		link: "http://www.amazon.com/Calorie-Myth-Exercise-Weight-Better/dp/0062267345/ref=sr_1_1?s=books&ie=UTF8&qid=1441043887&sr=1-1&keywords=the+calorie+myth",
-		category: ["Book"],
+		category: ["Books"],
 		keywords: [],
 		blurb: null
 	},
@@ -171,7 +171,7 @@ var interests = [
 		name: "Your Body's Many Cries for Water",
 		subtitle: null,
 		link: "http://www.amazon.com/Your-Bodys-Many-Cries-Water/dp/0970245882/ref=sr_1_1?s=books&ie=UTF8&qid=1441043906&sr=1-1&keywords=your+body%27s+many+cries+for+water",
-		category: ["Book"],
+		category: ["Books"],
 		keywords: [],
 		blurb: null
 	},
@@ -179,7 +179,7 @@ var interests = [
 		name: "Algorithms",
 		subtitle: null,
 		link: "http://beust.com/algorithms.pdf",
-		category: ["Book"],
+		category: ["Books"],
 		keywords: [],
 		blurb: null
 	},
@@ -187,7 +187,7 @@ var interests = [
 		name: "Convex Optimization",
 		subtitle: null,
 		link: "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf",
-		category: ["Book"],
+		category: ["Books"],
 		keywords: [],
 		blurb: null
 	},
@@ -271,14 +271,14 @@ var interests = [
 		keywords: [],
 		blurb: null
 	},
-	/*{
+	{
 		name: "Round-Off Error",
-		subtitle: null,
-		link: "",
-		category: [],
+		subtitle: "",
+		link: "http://archives.math.utk.edu/ICTCM/EP-7/SA15/pdf/paper.pdf",
+		category: ["Articles"],
 		keywords: [],
 		blurb: null
-	},*/
+	},
 	{
 		name: "IFSC",
 		subtitle: null,
@@ -347,7 +347,7 @@ var interests = [
 		name: "Salary Negotiation",
 		subtitle: null,
 		link: "http://www.kalzumeus.com/2012/01/23/salary-negotiation/",
-		category: ["Article"],
+		category: ["Articles"],
 		keywords: [],
 		blurb: null
 	},
@@ -363,7 +363,7 @@ var interests = [
 		name: "LatexIt",
 		subtitle: null,
 		link: "http://www.chachatelier.fr/latexit/latexit-downloads.php?lang=en",
-		category: ["App"],
+		category: ["Apps"],
 		keywords: [],
 		blurb: null
 	},
@@ -387,7 +387,7 @@ var interests = [
 		name: "Hero Machine",
 		subtitle: null,
 		link: "http://www.heromachine.com/",
-		category: ["App"],
+		category: ["Apps"],
 		keywords: [],
 		blurb: null
 	},
@@ -419,7 +419,7 @@ var interests = [
 		name: "Google Material Design",
 		subtitle: null,
 		link: "https://www.google.com/design/spec/material-design/introduction.html",
-		category: ["Article"],
+		category: ["Articles"],
 		keywords: [],
 		blurb: null
 	},
@@ -488,3 +488,42 @@ var interests = [
 		blurb: null
 	}*/
 ];
+
+// alphabetize interests
+interests.sort(function(a,b) {
+    if (a.name.toUpperCase().replace("THE ", "") < b.name.toUpperCase().replace("THE ", "")) return -1;
+    else if (a.name.toUpperCase().replace("THE ", "") > b.name.toUpperCase().replace("THE ", "")) return 1;
+    else return 0;
+});
+
+// create hash table for alphabetical list and categorical list
+var hash = (function () {
+
+	var hash = {alphabetical: {}, categorical: {}};
+
+	for (var i=0; i<interests.length; i++) {
+    	
+		// alphabetical book keeping
+    	var first = interests[i].name.toUpperCase().replace("THE ","")[0];
+
+    	if (hash.alphabetical[first]) {
+    		hash.alphabetical[first].push(interests[i]);
+    	}
+    	else {
+    		hash.alphabetical[first] = [interests[i]];
+    	};
+
+    	// category book keeping
+    	for (var j=0; j<interests[i].category.length; j++) {
+
+    		if (hash.categorical[interests[i].category[j]]) {
+    			hash.categorical[interests[i].category[j]].push(interests[i]);
+    		}
+    		else {
+    			hash.categorical[interests[i].category[j]] = [interests[i]];
+    		};
+    	}
+	};
+
+	return hash;
+})();

@@ -21,9 +21,9 @@
     
     <style>
         
-        .interest-letter-group {
+        .interest-group {
             background-color: #FFFFFF;
-            padding: 10px;
+            padding: 10px 10px 20px;
             margin-bottom: 8px;
         }
 
@@ -50,6 +50,30 @@
         #shortcuts a {
             margin: 0px 5px;
             font-size: 16px;
+        }
+
+        #buttons {
+            margin-bottom: -40px;
+        }
+
+        .button {
+            background-color: #FFFFFF;
+            padding: 10px;
+            margin: 10px;
+
+            border-style: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #F0F0F0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            cursor: pointer;
+        }
+
+        .pressed {
+            background-color: #F0F0F0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         }
 
         @media only screen and (max-width: 640px) {
@@ -96,6 +120,11 @@
         </div>
     </header>
 
+    <div id = "buttons" class = "container content">
+        <span class = "button shadow-2 pressed">Alphabetical</span>
+        <span class = "button shadow-2">Categorical</span>
+    </div>
+
 	<div id = "interests" class = "container content">
     </div>
 
@@ -109,94 +138,132 @@
         </div>
     </footer>
 
-    <script id="interest-template" type="text/template">
+    <script id="interest-link-template" type="text/template">
         <a href = "<%=link%>"><%=name%></a><br>
     </script>
 
-    <script id="interest-letter-group-template" type="text/template">
-        <div class = "interest-letter-group shadow-1">
-            <a name = "<%=letter%>"><h3> <%=letter%> </h3></a>
+    <script id="interest-group-template" type="text/template">
+        <div class = "interest-group shadow-1">
+            <a name = "<%=title%>"><h3> <%=title%> </h3></a>
             <div class = "sub-list">
             </div>
         </div>
     </script>
 
-    <script id="alphabetical-interest-template" type="text/template">
-        
+    <script id="three-col-interest-template" type="text/template">
         <div id = "shortcuts">
-
         </div>
 
         <div>
-
-            <div id = "left-col" class = "col-4">
-            </div>
-
-            <div id = "mid-col" class = "col-4">
-            </div>
-
-            <div id = "right-col" class = "col-4">
-            </div>
-
+            <div id = "left-col" class = "col-4"></div>
+            <div id = "mid-col" class = "col-4"></div>
+            <div id = "right-col" class = "col-4"></div>
         </div>
     </script>
 
     <script>
 
-        // alphabetize interests
-        interests.sort(function(a,b) {
-            if (a.name.toUpperCase().replace("THE ", "") < b.name.toUpperCase().replace("THE ", "")) return -1;
-            else if (a.name.toUpperCase().replace("THE ", "") > b.name.toUpperCase().replace("THE ", "")) return 1;
-            else return 0;
-        });
+        var group = _.template($("#interest-group-template").html());
+        var link = _.template($("#interest-link-template").html());
+        var shortcut = _.template("<a href = '#<%=title%>'> <%=title%> </a>");
 
-        // sort interests into letter bins
-        var lists = {A: [], B: [], C: [], D: [], E: [], F: [], G: [], H: [], I: [], J: [], K: [], L: [], M: [], N: [], O: [], P: [], Q: [], R: [], S: [], T: [], U: [], V: [], W: [], X: [], Y: [], Z: []};
-        for (var i=0; i<interests.length; i++) {
-            lists[interests[i].name.toUpperCase().replace("THE ","")[0]].push(interests[i]);
-        }
+        function alphabetical() {
+            
+            $("#interests").empty();
 
-        // find number of letter groups we have
-        var columns = {left: [], middle: [], right: []};
-        var nLetters = 0;
-        for (var letter in lists) {
-            if (lists[letter].length !== 0) {nLetters++}
-        };
+            // use three column 
+            $("#interests").append(_.template($("#three-col-interest-template").html())());
+            var columns = {left: [], middle: [], right: []};
 
-        // compute total "height" of list (so we can divide it somewhat evenly into 3 columns)
-        var H = nLetters*3 + interests.length;
+            // find number of letter groups we have
+            var nLetters = Object.keys(hash.alphabetical).length;
 
+            // compute total "height" of list (so we can divide it somewhat evenly into 3 columns)
+            var H = nLetters*5 + interests.length;
 
-        $("#interests").append(_.template($("#alphabetical-interest-template").html())());
+            //var group = _.template($("#interest-group-template").html());
+            //var template = _.template($("#interest-link-template").html());
+            var current = 0;
+            for (var letter in hash.alphabetical) {
+                current+=5;
+                    
+                $("#shortcuts").append(shortcut({title: letter}));
 
-
-        var group = _.template($("#interest-letter-group-template").html());
-        var template = _.template($("#interest-template").html());
-        var current = 0;
-        for (var letter in lists) {
-            current+=3;
-            if (lists[letter].length !== 0) {
-                
-                $("#shortcuts").append("<a href = '#" + letter + "''>" + letter + "</a>");
-
-                var $group = $(group({letter: letter}));
-                for (var j=0; j<lists[letter].length; j++) {
-                    $group.children(".sub-list").append(template(lists[letter][j]));
+                var $group = $(group({title: letter}));
+                for (var j=0; j<hash.alphabetical[letter].length; j++) {
+                    $group.children(".sub-list").append(link(hash.alphabetical[letter][j]));
                     current++;
                 }
                 
                 if (current/H < .4) {
                     $("#left-col").append($group);
                 }
-                else if (current/H < .8) {
+                else if (current/H < .7) {
+                    $("#mid-col").append($group);
+                }
+                else {
+                    $("#right-col").append($group);
+                }
+                
+            };
+        };
+
+        function categorical() {
+
+            $("#interests").empty();
+
+            // use three columns
+            $("#interests").append(_.template($("#three-col-interest-template").html())());
+            var columns = {left: [], middle: [], right: []};
+
+            // find number of categories we have
+            var nCategories = Object.keys(hash.categorical).length;
+
+            // find total "height" so we can divide evenly into three columns
+            var H = 5*nCategories;
+            for (var category in hash.categorical) {
+                H+=hash.categorical[category].length;
+            };
+
+            var current = 0;
+            for (var category in hash.categorical) {
+
+                current+=5;
+
+                var $group = $(group({title: category}));
+
+                for (var i=0; i<hash.categorical[category].length; i++) {
+                    $group.append(link(hash.categorical[category][i]));
+                    current++;
+                };
+
+                if (current/H < .4) {
+                    $("#left-col").append($group);
+                }
+                else if (current/H < .7) {
                     $("#mid-col").append($group);
                 }
                 else {
                     $("#right-col").append($group);
                 }
             }
+
         };
 
+        $(".button").on("click", function(event) {
+            $(this).siblings("span").removeClass("pressed")
+            $(this).addClass("pressed")
+
+            if ($(this).text()==="Alphabetical") {
+                alphabetical();
+            }
+            else {
+                categorical();
+            }
+        });
+
+        alphabetical();
+        
     </script>
 </body>
 </html>
