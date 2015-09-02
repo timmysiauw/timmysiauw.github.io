@@ -58,7 +58,7 @@ var interests = [
 	{
 		name: "Dan Carlin",
 		subtitle: null,
-		link: "",
+		link: "http://www.dancarlin.com/hardcore-history-series/",
 		category: ["People"],
 		keywords: [],
 		blurb: null
@@ -66,8 +66,8 @@ var interests = [
 	{
 		name: "Dan Carlin\'s Hardcore History",
 		subtitle: null,
-		link: "",
-		category: ["People", "Podcasts", "Channels"],
+		link: "http://www.dancarlin.com/hardcore-history-series/",
+		category: ["Podcasts", "Channels"],
 		keywords: [],
 		blurb: null
 	},
@@ -450,12 +450,12 @@ var interests = [
 	{
 		name: "Culture Novels",
 		subtitle: null,
-		link: "",
+		link: "https://www.goodreads.com/series/49118-culture",
 		category: ["Book"],
 		keywords: [],
 		blurb: null
 	},
-	{
+	/*{
 		name: "The Silmarillion",
 		subtitle: null,
 		link: "",
@@ -486,5 +486,5 @@ var interests = [
 		category: ["Book", "Article"],
 		keywords: [],
 		blurb: null
-	}
+	}*/
 ];
