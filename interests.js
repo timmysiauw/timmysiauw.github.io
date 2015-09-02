@@ -27,7 +27,7 @@ var interests = [
 		name: "Maya Abu-Mansour",
 		subtitle: null,
 		link: "http://www.fitnessbymaya.com/",
-		category: ["People", "Friends"],
+		category: ["People", "Friends", "Health and Fitness"],
 		keywords: [],
 		blurb: null
 	},
@@ -35,7 +35,7 @@ var interests = [
 		name: "Mark Jellison",
 		subtitle: null,
 		link: "http://markjellison.com/",
-		category: ["People"],
+		category: ["People", "Health and Fitness"],
 		keywords: [],
 		blurb: null
 	},
@@ -43,7 +43,7 @@ var interests = [
 		name: "Sean Darling-Hammond",
 		subtitle: null,
 		link: "https://www.facebook.com/thegivingninja",
-		category: ["People", "Friends"],
+		category: ["People", "Friends", "Health and Fitness"],
 		keywords: [],
 		blurb: null
 	},
@@ -51,6 +51,14 @@ var interests = [
 		name: "Sean Plott",
 		subtitle: null,
 		link: "http://day9.tv/",
+		category: ["People", "Gaming"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "Dan Carlin",
+		subtitle: null,
+		link: "",
 		category: ["People"],
 		keywords: [],
 		blurb: null
@@ -59,7 +67,7 @@ var interests = [
 		name: "Dan Carlin\'s Hardcore History",
 		subtitle: null,
 		link: "",
-		category: [],
+		category: ["People", "Podcasts", "Channels"],
 		keywords: [],
 		blurb: null
 	},
@@ -67,7 +75,7 @@ var interests = [
 		name: "Adriene",
 		subtitle: null,
 		link: "https://www.youtube.com/user/yogawithadriene",
-		category: ["People"],
+		category: ["People", "Health and Fitness", "Channels"],
 		keywords: [],
 		blurb: null
 	},
@@ -131,7 +139,7 @@ var interests = [
 		name: "jsdicom",
 		subtitle: null,
 		link: "https://github.com/Infogosoft/jsdicom",
-		category: ["Javascript"],
+		category: ["Programming", "Javascript"],
 		keywords: ["javascript", "programming", "web"],
 		blurb: null
 	},
@@ -187,7 +195,7 @@ var interests = [
 		name: "Berkeley Ironworks",
 		subtitle: null,
 		link: "https://touchstoneclimbing.com/ironworks/",
-		category: [],
+		category: ["Climbing", "Health and Fitness"],
 		keywords: [],
 		blurb: null
 	},
@@ -195,7 +203,7 @@ var interests = [
 		name: "Touchstone Climbing",
 		subtitle: null,
 		link: "https://touchstoneclimbing.com/",
-		category: [],
+		category: ["Climbing", "Health and Fitness"],
 		keywords: [],
 		blurb: null
 	},
@@ -203,7 +211,7 @@ var interests = [
 		name: "Total Athletic Conditioning",
 		subtitle: null,
 		link: "http://recsports.berkeley.edu/fitness-wellness/group-exercise/all-around-workouts/total-athletic-conditioning/",
-		category: [],
+		category: ["Health and Fitness"],
 		keywords: [],
 		blurb: null
 	},
@@ -211,7 +219,7 @@ var interests = [
 		name: "SURF",
 		subtitle: null,
 		link: "http://surf.berkeley.edu/",
-		category: [],
+		category: ["Groups"],
 		keywords: [],
 		blurb: null
 	},
@@ -219,7 +227,7 @@ var interests = [
 		name: "Matlab",
 		subtitle: null,
 		link: "http://www.mathworks.com/products/matlab/",
-		category: [],
+		category: ["Programming"],
 		keywords: [],
 		blurb: null
 	},
@@ -227,7 +235,7 @@ var interests = [
 		name: "Python",
 		subtitle: null,
 		link: "https://www.python.org/",
-		category: [],
+		category: ["Programming"],
 		keywords: [],
 		blurb: null
 	},
@@ -235,7 +243,7 @@ var interests = [
 		name: "Midori",
 		subtitle: null,
 		link: "http://www.midorisushi.net/",
-		category: [],
+		category: ["Food"],
 		keywords: [],
 		blurb: null
 	},
@@ -243,7 +251,7 @@ var interests = [
 		name: "IMDB",
 		subtitle: null,
 		link: "http://www.imdb.com/",
-		category: [],
+		category: ["Movies"],
 		keywords: [],
 		blurb: null
 	},
@@ -251,7 +259,7 @@ var interests = [
 		name: "Go",
 		subtitle: null,
 		link: "https://en.wikipedia.org/wiki/Go_(game)",
-		category: [],
+		category: ["Gaming"],
 		keywords: [],
 		blurb: null
 	},
@@ -259,7 +267,7 @@ var interests = [
 		name: "GoPanda2",
 		subtitle: null,
 		link: "http://pandanet-igs.com/communities/gopanda2",
-		category: [],
+		category: ["Gaming"],
 		keywords: [],
 		blurb: null
 	},
@@ -275,23 +283,15 @@ var interests = [
 		name: "IFSC",
 		subtitle: null,
 		link: "http://www.ifsc-climbing.org/",
-		category: [],
+		category: ["Climbing", "Channels"],
 		keywords: [],
 		blurb: null
 	},
 	{
 		name: "LouderThan11",
 		subtitle: null,
-		link: "https://lt11.com/",
-		category: [],
-		keywords: [],
-		blurb: null
-	},
-	{
-		name: "LouderThan11 (youtube)",
-		subtitle: null,
 		link: "https://www.youtube.com/user/LouderThan11",
-		category: [],
+		category: ["Climbing", "Channels"],
 		keywords: [],
 		blurb: null
 	},
@@ -299,7 +299,7 @@ var interests = [
 		name: "Starcraft",
 		subtitle: null,
 		link: "http://us.battle.net/sc2/en/?-",
-		category: [],
+		category: ["Gaming"],
 		keywords: [],
 		blurb: null
 	},
@@ -307,7 +307,7 @@ var interests = [
 		name: "TeamLiquid.net",
 		subtitle: null,
 		link: "http://www.teamliquid.net/",
-		category: [],
+		category: ["Gaming"],
 		keywords: [],
 		blurb: null
 	},
@@ -315,7 +315,7 @@ var interests = [
 		name: "Github",
 		subtitle: null,
 		link: "https://github.com/",
-		category: [],
+		category: ["Programming"],
 		keywords: [],
 		blurb: null
 	},
@@ -323,7 +323,7 @@ var interests = [
 		name: "League of Legends",
 		subtitle: null,
 		link: "http://na.leagueoflegends.com/",
-		category: [],
+		category: ["Gaming"],
 		keywords: [],
 		blurb: null
 	},
@@ -331,7 +331,7 @@ var interests = [
 		name: "Straw",
 		subtitle: null,
 		link: "http://www.strawsf.com/",
-		category: [],
+		category: ["Food"],
 		keywords: [],
 		blurb: null
 	},
@@ -339,7 +339,7 @@ var interests = [
 		name: "Sushi House",
 		subtitle: null,
 		link: "http://www.e-sushihouse.com/",
-		category: [],
+		category: ["Food"],
 		keywords: [],
 		blurb: null
 	},
@@ -347,7 +347,7 @@ var interests = [
 		name: "Salary Negotiation",
 		subtitle: null,
 		link: "http://www.kalzumeus.com/2012/01/23/salary-negotiation/",
-		category: [],
+		category: ["Article"],
 		keywords: [],
 		blurb: null
 	},
@@ -355,7 +355,7 @@ var interests = [
 		name: "Latex",
 		subtitle: null,
 		link: "http://www.latex-project.org/",
-		category: [],
+		category: ["Miscellaneous"],
 		keywords: [],
 		blurb: null
 	},
@@ -363,7 +363,7 @@ var interests = [
 		name: "LatexIt",
 		subtitle: null,
 		link: "http://www.chachatelier.fr/latexit/latexit-downloads.php?lang=en",
-		category: [],
+		category: ["App"],
 		keywords: [],
 		blurb: null
 	},
@@ -371,7 +371,7 @@ var interests = [
 		name: "La Mission",
 		subtitle: null,
 		link: "http://www.yelp.com/biz/la-mission-berkeley",
-		category: [],
+		category: ["Food"],
 		keywords: [],
 		blurb: null
 	},
@@ -379,7 +379,7 @@ var interests = [
 		name: "La Burrita",
 		subtitle: null,
 		link: "http://www.yelp.com/biz/la-burrita-berkeley",
-		category: [],
+		category: ["Food"],
 		keywords: [],
 		blurb: null
 	},
@@ -387,7 +387,7 @@ var interests = [
 		name: "Hero Machine",
 		subtitle: null,
 		link: "http://www.heromachine.com/",
-		category: [],
+		category: ["App"],
 		keywords: [],
 		blurb: null
 	},
@@ -395,7 +395,7 @@ var interests = [
 		name: "Goorin Bros.",
 		subtitle: null,
 		link: "http://www.goorin.com/",
-		category: [],
+		category: ["Fashion"],
 		keywords: [],
 		blurb: null
 	},
@@ -403,7 +403,7 @@ var interests = [
 		name: "Indochino",
 		subtitle: null,
 		link: "http://www.indochino.com/",
-		category: [],
+		category: ["Fashion"],
 		keywords: [],
 		blurb: null
 	},
@@ -411,7 +411,7 @@ var interests = [
 		name: "Bungee Adventures",
 		subtitle: null,
 		link: "http://bungeeadventures.net/",
-		category: [],
+		category: ["Fun"],
 		keywords: [],
 		blurb: null
 	},
@@ -419,16 +419,72 @@ var interests = [
 		name: "Google Material Design",
 		subtitle: null,
 		link: "https://www.google.com/design/spec/material-design/introduction.html",
-		category: [],
+		category: ["Article"],
 		keywords: [],
 		blurb: null
 	},
 	{
-		name: "Startup Podcaset",
+		name: "Startup",
 		subtitle: null,
 		link: "https://gimletmedia.com/show/startup/",
-		category: [],
+		category: ["Channels", "Podcasts", "Startups"],
 		keywords: [],
 		blurb: null
 	},
+	{
+		name: "Audible",
+		subtitle: null,
+		link: "",
+		category: ["Book"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "Iain M. Banks",
+		subtitle: null,
+		link: "",
+		category: ["Book"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "Culture Novels",
+		subtitle: null,
+		link: "",
+		category: ["Book"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "The Silmarillion",
+		subtitle: null,
+		link: "",
+		category: ["Book"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "I, Robot",
+		subtitle: null,
+		link: "",
+		category: ["Book"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "Isaac Asimov",
+		subtitle: null,
+		link: "",
+		category: ["People", "Book"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "Harrison Bergeron",
+		subtitle: null,
+		link: "",
+		category: ["Book", "Article"],
+		keywords: [],
+		blurb: null
+	}
 ];
