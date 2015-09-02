@@ -27,6 +27,10 @@
             margin-bottom: 8px;
         }
 
+        .interest-group h3 {
+            text-align: center;
+        }
+
         .col-4 {
             width: 32%;
             float: left;
@@ -95,6 +99,10 @@
 
             .col-4:last-child {
                 margin-bottom: 60px;
+            }
+
+            h3 {
+                font-size: 14px;
             }
         }
     </style>
@@ -246,6 +254,7 @@
                 else {
                     $("#right-col").append($group);
                 }
+
             }
 
         };
@@ -253,13 +262,7 @@
         $(".button").on("click", function(event) {
             $(this).siblings("span").removeClass("pressed")
             $(this).addClass("pressed")
-
-            if ($(this).text()==="Alphabetical") {
-                alphabetical();
-            }
-            else {
-                categorical();
-            }
+            $(this).text()==="Alphabetical" ? alphabetical() : categorical();
         });
 
         alphabetical();

@@ -19,7 +19,7 @@ var interests = [
 		name: "Leah Serb",
 		subtitle: null,
 		link: "http://leahserb.wix.com/fossi-baht",
-		category: ["People", "Friends"],
+		category: ["People", "Friends", "Fashion"],
 		keywords: [],
 		blurb: null
 	},
