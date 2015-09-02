@@ -435,7 +435,7 @@ var interests = [
 		name: "Audible",
 		subtitle: null,
 		link: "",
-		category: ["Book"],
+		category: ["Books"],
 		keywords: [],
 		blurb: null
 	},
@@ -443,7 +443,7 @@ var interests = [
 		name: "Iain M. Banks",
 		subtitle: null,
 		link: "",
-		category: ["Book"],
+		category: ["Books"],
 		keywords: [],
 		blurb: null
 	},
@@ -451,7 +451,23 @@ var interests = [
 		name: "Culture Novels",
 		subtitle: null,
 		link: "https://www.goodreads.com/series/49118-culture",
-		category: ["Book"],
+		category: ["Books"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "TechShop",
+		subtitle: null,
+		link: "http://www.techshop.ws/index.html",
+		category: ["Groups"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "Adobe Kuler",
+		subtitle: null,
+		link: "https://color.adobe.com/create/color-wheel/",
+		category: ["Apps"],
 		keywords: [],
 		blurb: null
 	},
