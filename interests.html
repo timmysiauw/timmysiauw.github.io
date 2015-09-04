@@ -179,40 +179,48 @@
             
             $("#interests").empty();
 
-            // use three column 
-            $("#interests").append(_.template($("#three-col-interest-template").html())());
-            var columns = {left: [], middle: [], right: []};
-
             // find number of letter groups we have
             var nLetters = Object.keys(hash.alphabetical).length;
 
-            // compute total "height" of list (so we can divide it somewhat evenly into 3 columns)
-            var H = nLetters*5 + interests.length;
+            // compute heights of each letter card (from inspect element...)
+            var H = [];
+            for (var letter in hash.alphabetical) {
+                H.push(84.75 + 19*hash.alphabetical[letter].length);
+            }
 
-            //var group = _.template($("#interest-group-template").html());
-            //var template = _.template($("#interest-link-template").html());
+            // split using our handy dandy function
+            var split = stack3(H);
+
+            // use three column 
+            $("#interests").append(_.template($("#three-col-interest-template").html())());
+
+            // place cards into columns
             var current = 0;
             for (var letter in hash.alphabetical) {
-                current+=5;
-                    
+               
+                // put this letter into short cut list                  
                 $("#shortcuts").append(shortcut({title: letter}));
 
+                // create card
                 var $group = $(group({title: letter}));
+
+                // add links to card
                 for (var j=0; j<hash.alphabetical[letter].length; j++) {
                     $group.children(".sub-list").append(link(hash.alphabetical[letter][j]));
-                    current++;
                 }
                 
-                if (current/H < .4) {
+                // put into correct column based on split
+                if (current <= split.a) {
                     $("#left-col").append($group);
                 }
-                else if (current/H < .7) {
+                else if (current <= split.b) {
                     $("#mid-col").append($group);
                 }
                 else {
                     $("#right-col").append($group);
                 }
                 
+                current++;
             };
         };
 
@@ -222,39 +230,39 @@
 
             // use three columns
             $("#interests").append(_.template($("#three-col-interest-template").html())());
-            var columns = {left: [], middle: [], right: []};
 
             // find number of categories we have
             var nCategories = Object.keys(hash.categorical).length;
 
             // find total "height" so we can divide evenly into three columns
-            var H = 5*nCategories;
+            var H = [];
             for (var category in hash.categorical) {
-                H+=hash.categorical[category].length;
-            };
+                H.push(84.75 + 19*hash.categorical[category].length);
+            }
+
+            // get split
+            var split = stack3(H);
+            console.log(split)
 
             var current = 0;
             for (var category in hash.categorical) {
 
-                current+=5;
-
                 var $group = $(group({title: category}));
-
                 for (var i=0; i<hash.categorical[category].length; i++) {
                     $group.append(link(hash.categorical[category][i]));
-                    current++;
                 };
 
-                if (current/H < .4) {
+                if (current <= split.a) {
                     $("#left-col").append($group);
                 }
-                else if (current/H < .7) {
+                else if (current <= split.b) {
                     $("#mid-col").append($group);
                 }
                 else {
                     $("#right-col").append($group);
                 }
 
+                current++;
             }
 
         };
