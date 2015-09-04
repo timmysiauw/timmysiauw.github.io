@@ -171,6 +171,48 @@
 
     <script>
 
+        function stack3(A) {
+            // returns cut points a and b for array, A, such that s1 = sum(A[i]_{i=0 to a}, 
+            // s2 = sum(A[i]_{i=a+1 to b}), and s3 = sum(A[i]_{i=b+1 to end}) has MINIMUM VARIANCE.
+            // note that a is the "back" of the first sub array and b is the "back" of the second sub array. 
+
+            var end = A.length-1;
+
+            var P = []; // cumulative sum
+            var S = 0; // total sum, = P[end]
+            for (var i=0; i<A.length; i++) {
+                P.push(S+=A[i]);
+            };
+
+            var V = 1000000000000; // minumum variance found. initialize to high value
+            var a, b, v, s1, s2, s3
+            for (var i=0; i<A.length-2; i++) {
+                for (var j=i+1; j<A.length-1; j++) {
+
+                    s1 = P[i];
+                    s2 = P[j]-P[i];
+                    s3 = P[end]-P[j];
+
+                    v = s1*s1 + s2*s2 + s3*s3; 
+                    // this should be v = (s1*s1 + s2*s2 + s3*s3)/3 - ((s1 + s2 + s3)/3)^2, i.e. E[x^2] - E[x]^2
+                    // which is v = (s1*s1 + s2*s2 + s3*s3)/3 - S*S/9
+                    // BUT division by 3 of first term and S*S/9 are constants when comparing for optimality, so we can get away with not computing it
+
+                    if (v < V) { //update if better
+                        V = v; a = i; b = j;
+                    };
+                };
+            };
+
+            return {
+                V: V/3 - S*S/9, // for fun compute actual variance
+                a: a,
+                b: b
+            }
+
+        };
+
+
         var group = _.template($("#interest-group-template").html());
         var link = _.template($("#interest-link-template").html());
         var shortcut = _.template("<a href = '#<%=title%>'> <%=title%> </a>");
