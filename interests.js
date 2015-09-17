@@ -487,6 +487,16 @@ var interests = [
 		keywords: [],
 		blurb: null
 	},
+	{
+		name: "Startup Class",
+		subtitle: null,
+		link: "http://startupclass.samaltman.com/",
+		category: ["Startups"],
+		keywords: [],
+		blurb: null
+	},
+	
+
 	
 	/*{
 		name: "The Silmarillion",

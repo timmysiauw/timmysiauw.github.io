@@ -70,13 +70,12 @@
         }
 
         .button:hover {
-            background-color: #F0F0F0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             cursor: pointer;
         }
 
         .pressed {
-            background-color: #F0F0F0;
+            background-color: #454545;
+            color: #FAFAFA;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         }
 
@@ -209,6 +208,43 @@
                 a: a,
                 b: b
             }
+
+        };
+
+        function stackM(A) {
+            
+            var end = A.length-1;
+
+            var P = [];
+            var S = 0;
+            for (var i=0; i<A.length; i++) {
+                P.push(S+=A[i]);
+            };
+
+            var M = 1000000000000;
+            var a, b, m, s1, s2, s3
+            for (var i=0; i<A.length-2; i++) {
+
+                s1 = P[i];
+
+                if (s1 >= M) break;
+
+                for (var j=i+1; j<A.length-1; j++) {
+
+                    s2 = P[j]-P[i];
+                    s3 = P[end]-P[j];
+
+                    if (s2 >= M) break;
+
+                    m = Math.max(s1,s2,s3);
+
+                    if (m < M) {
+                        M = m; a = i; b = j;
+                    };
+                };
+            };
+
+            return {a: a, b: b};
 
         };
 
