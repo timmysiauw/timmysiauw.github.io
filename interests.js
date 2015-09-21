@@ -419,7 +419,7 @@ var interests = [
 		name: "Google Material Design",
 		subtitle: null,
 		link: "https://www.google.com/design/spec/material-design/introduction.html",
-		category: ["Articles"],
+		category: ["Articles", "Guidelines"],
 		keywords: [],
 		blurb: null
 	},
@@ -495,7 +495,15 @@ var interests = [
 		keywords: [],
 		blurb: null
 	},
-	
+	{
+		name: "iOS Interface Guidelines",
+		subtitle: null,
+		link: "https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/",
+		category: ["Article", "Guidelines"],
+		keywords: [],
+		blurb: null
+	}	
+
 
 	
 	/*{
