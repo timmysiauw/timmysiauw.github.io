@@ -499,10 +499,18 @@ var interests = [
 		name: "iOS Interface Guidelines",
 		subtitle: null,
 		link: "https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/",
-		category: ["Article", "Guidelines"],
+		category: ["Articles", "Guidelines"],
 		keywords: [],
 		blurb: null
-	}	
+	},
+	{
+		name: "Project Euler",
+		subtitle: null,
+		link: "https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/",
+		category: ["Programming"],
+		keywords: [],
+		blurb: null
+	}		
 
 
 	
