@@ -16,53 +16,62 @@
     
     <style>
 
+        h3 {
+            margin-top: 30px;
+        }
+
         .project-thumbnail {
-            float: left;
-            width: 23%;
-            margin: 1%;
-            background-color: white;
-
-            position: relative;
-            top: 0px;
-            left: 0px;
-        }
-
-        .project-thumbnail:hover {
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        }
-
-        .project-thumbnail img {
             width: 100%;
-        }
+            height: 250px;
+            background-color: #FFF;
+            margin: 2% 0%;
+            padding: 2.5% 5%;
 
+        }
 
         .project-title {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,.6);
-            text-align: center;
-
-            display: none;
+            font-size: 14px;
+            font-weight: bold;
         }
 
-        .project-title span {
-            position: relative;
-            top: 40%;
-            font-size: 16px;
-            color: white;
+        .project-body {
+            width: 100%;
+        }
+
+        .project-body > div {
+            float: left;
+            margin-top: 20px;
+        }
+
+        .project-img {
+            width: 25%;
+            margin-left: -2.5%;
+            margin-right: 2.5%;
+        }
+
+        .project-img > img {
+            width: 100%;
+        }
+
+        .project-caption {
+            width: 75%;
+            margin-top: 12px;
         }
 
         @media only screen and (max-width: 640px) {
-            .project-thumbnail {
-                width: 96%;
-                margin: 2%;
+           .project-thumbnail {
+                height: auto;
+           }
+
+           .project-body > div {
+                float: none;
+                width: 100%;
             }
 
-            .project-title {
+            .project-img > img {
+                width: 60%;
                 display: block;
+                margin: auto;
             }
         }
 
@@ -72,7 +81,7 @@
 
 <body>
 
-	<header>
+    <header>
         <div class = "container">
             
             <a href = "index.html"><img src = "logo.png"/></a>
@@ -90,77 +99,126 @@
         </div>
     </header>
 
-	<div class = "container content">
-        <a href = "robot.html" class = "project-thumbnail shadow-2">
-            <img src = "images/project-thumbnails/thumbnail-robottournament.png"/>
+    <div class = "container content">
+        
+        <div class = "project-thumbnail shadow-1">
             <div class = "project-title">
-                <span> Robot Tournament </span>
+                <a href = "robot.html"> Robot Tournament </a>
             </div>
-        </a>
+            <div class = "project-body">
+                <div class = "project-img">
+                    <img src = "images/project-thumbnails/thumbnail-robottournament.png"/>
+                </div>
+                <div class = "project-caption">
+                    While I was a graduate student, I was a TA for UC Berkeley's core engineering programming course. After several semesters, I felt the cirriculum lacked opportunities for students to write non-trivial and creative programs. To address this shortcoming, I created a semester project called the Robot Tournament, where students had to write an AI for a virtual game of tag-with-a-twist. By all metrics, the tournament was a huge success!
+                </div>
+            </div>
+        </div>
 
-        <a href = "brachy.html" class = "project-thumbnail shadow-2">
-            <img src = "images/project-thumbnails/thumbnail-brachyopt.png"/>
+        <div class = "project-thumbnail shadow-1">
             <div class = "project-title">
-                <span> Brachytherapy Optimization </span>
+                <a href = "brachy.html"> Brachytherapy Optimization</a>
             </div>
-        </a>
+            <div class = "project-body">
+                <div class = "project-img">
+                    <img src = "images/project-thumbnails/thumbnail-brachyopt.png"/>
+                </div>
+                <div class = "project-caption">
+                    Brachytherapy is a way of treating cancer where radioactive sources are delivered directly to the tumor site. Treatment quality and the radiation dose and to the tumor and surrounding tissue depends on the arrangement of the sources. My graduate work developed algorithms to maximize treatment effectiveness, minimize damage to surrounding tissue, and automate brachytherapy using robots. These algorithms relied heavily on linear and integer programming models.  
+                </div>
+            </div>
+        </div>
 
-        <a href = "3Dprinting.html" class = "project-thumbnail shadow-2">
-            <img src = "images/project-thumbnails/thumbnail-3dprinting.png"/>
+        <div class = "project-thumbnail shadow-1">
             <div class = "project-title">
-                <span> 3D Printed Brachytherapy </span>
+                <a href = "3Dprinting.html"> Custom Brachytherapy & 3D Printing</a>
             </div>
-        </a>
+            <div class = "project-body">
+                <div class = "project-img">
+                    <img src = "images/project-thumbnails/thumbnail-3dprinting.png"/>
+                </div>
+                <div class = "project-caption">
+                    When brachytherapy is used to treat cancer in the uterus, cervix, and vaginal canal, treatment is delivered using standard applicators that come in only a few fixed sizes and geometries. Often these applicators fit too loosely or tightly, which makes treatment uncertain and uncomfortable, and if there are no applicators that fit the patient, then brachytherapy is not a viable treatment option for them. As a post-doc at UCSF, I helped develop a method for creating custom applicators using 3D printing, which we used to treat several patients that could not have been treated otherwise. 
+                </div>
+            </div>
+        </div>
 
-        <a href = "nimble.html" class = "project-thumbnail shadow-2">
-            <img src = "images/project-thumbnails/thumbnail-nimble.png"/>
+        <div class = "project-thumbnail shadow-1">
             <div class = "project-title">
-                <span> Nimble </span>
+                <a href = "nimble.html"> Nimble </a>
             </div>
-        </a>
+            <div class = "project-body">
+                <div class = "project-img">
+                    <img src = "images/project-thumbnails/thumbnail-nimble.png"/>
+                </div>
+                <div class = "project-caption">
+                    Treating cancer with radiation requires substantial planning, which involves doctors, technicians, and physicists. This planning workflow is currently supported by software that is slow, difficult to update, does not allow remote collaboration, and does not use historical data to help current patients. Nimble is a company I founded to build the first web-based treatment planning system that would address these workflow issues. 
+                </div>
+            </div>
+        </div>
 
-       <a href = "http://timmysiauw.github.io/io-grid/" class = "project-thumbnail shadow-2">
-            <img src = "images/project-thumbnails/thumbnail-iogrid.png"/>
+        <div class = "project-thumbnail shadow-1">
             <div class = "project-title">
-                <span> Grids </span>
+                <a href = "http://timmysiauw.github.io/io-grid/"> Fast IO Grids </a>
             </div>
-        </a>
+            <div class = "project-body">
+                <div class = "project-img">
+                    <img src = "images/project-thumbnails/thumbnail-iogrid.png"/>
+                </div>
+                <div class = "project-caption">
+                    Computing whether or not a point lies inside a polygon can be accomplished by well-known algorithms. However, computing whether many points lie inside a polygon using the same algorithms will perform many redundant calculations when those points are arranged into a grid. I developed this Javascript library to efficiently compute the points in a grid that lie inside a given polygon by exploiting their grid structure. The GUI is implemented using paper.js. 
+                </div>
+            </div>
+        </div>
 
-        <a href = "https://github.com/timmysiauw/jet-color" class = "project-thumbnail shadow-2">
-            <img src = "images/project-thumbnails/thumbnail-jetcolor.png"/>
+        <div class = "project-thumbnail shadow-1">
             <div class = "project-title">
-                <span> Jet Color </span>
+                <a href = "https://github.com/timmysiauw/jet-color"> Jet Color </a>
             </div>
-        </a>
+            <div class = "project-body">
+                <div class = "project-img">
+                    <img src = "images/project-thumbnails/thumbnail-jetcolor.png"/>
+                </div>
+                <div class = "project-caption">
+                    It is often useful to map numerical values to a linear color scale (think greyscale for x-ray images). Matlab has several built-in color scales, or schemes, and JET is its default. I implemented Matlab's JET color scheme in 256 steps using Javascript. 
+                </div>
+            </div>
+        </div>
 
-        <a href = "http://timmysiauw.github.io/d3-logo-fun/" class = "project-thumbnail shadow-2">
-            <img src = "images/project-thumbnails/thumbnail-d3intro.png"/>
+        <div class = "project-thumbnail shadow-1">
             <div class = "project-title">
-                <span> D3 Intro </span>
+                <a href = "http://timmysiauw.github.io/d3-logo-fun/"> D3 Introduction</a>
             </div>
-        </a>
+            <div class = "project-body">
+                <div class = "project-img">
+                    <img src = "images/project-thumbnails/thumbnail-d3intro.png"/>
+                </div>
+                <div class = "project-caption">
+                    This was a small project I used to get myself up to speed with D3, a data visualization library in Javacript. The project utilizes the aforementioned io-grid and jet-color libraries.
+                </div>
+            </div>
+        </div>
 
-        <a href = "https://github.com/timmysiauw/favicons-and-logos/" class = "project-thumbnail shadow-2">
-            <img src = "logo.png" style="padding:30%"/>
+        <!--
+        <div class = "project-thumbnail shadow-1">
             <div class = "project-title">
-                <span> Logo </span>
+                <a href = ""> Neural Networks </a>
             </div>
-        </a>
+            <div class = "project-body">
+                <div class = "project-img">
+                    <img src = "images/project-thumbnails/thumbnail-brachyopt.png"/>
+                </div>
+                <div class = "project-caption">
+                    The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.
+                </div>
+            </div>
+        </div> -->
+        
     </div>
 
     <script>
         
-    (function() {
-        var $thumbnails = document.getElementsByClassName("project-thumbnail");
-        for (var i=0; i<$thumbnails.length; i++) {
-            $thumbnails[i].addEventListener("mouseenter", function(event) {
-                this.getElementsByClassName("project-title")[0].style.display = "block";
-            });
-            $thumbnails[i].addEventListener("mouseleave", function(event) {
-                this.getElementsByClassName("project-title")[0].style.display = "none";
-            });
-        }; 
-    })();
+   
         
     </script>
 
