@@ -510,6 +510,30 @@ var interests = [
 		category: ["Programming"],
 		keywords: [],
 		blurb: null
+	},
+	{
+		name: "Quad-tree",
+		subtitle: null,
+		link: "https://en.wikipedia.org/wiki/Quadtree",
+		category: ["Algorithms"],
+		keywords: [],
+		blurb: null
+	}, 
+	{
+		name: "A-star",
+		subtitle: null,
+		link: "https://en.wikipedia.org/wiki/A*_search_algorithm",
+		category: ["Algorithms"],
+		keywords: [],
+		blurb: null
+	},
+	{
+		name: "L-systems",
+		subtitle: null,
+		link: "https://en.wikipedia.org/wiki/L-system",
+		category: ["Algorithms"],
+		keywords: [],
+		blurb: null
 	}		
 
 
